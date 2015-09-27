@@ -1,0 +1,47 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <title>IT 411 - Jennifer Kania - Assignment 5 - Enlarging An Image With Classes</title>
+  <link href="stylesheets/IT411b.css" rel="stylesheet">
+  <style>
+      
+    .image.large {
+      width: 50%;
+      height: 50%;
+    }
+
+    .image {
+      transition: all 3s ease;
+    }
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    $(document).ready(function() {
+
+      $(".image").mouseenter(function() {
+        $(this).addClass("large");
+      });
+
+      $(".image").mouseleave(function() {
+        $(this).removeClass("large");
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+  <h1>IT 411 - A5 - Enlarging An Image With Classes</h1>
+  <h2>Displaying a gallery of images - hover over an image to make it bigger</h2>
+  <hr />
+  <div id="content">
+  </div>
+  <div id="gallery">
+    <h3>Gallery of images</h3>
+    <img class="image" src="images/gnu.jpg" height="200px" width="250px">
+    <img class="image" src="images/tiger.jpg" height="200px" width="250px">
+    <img class="image" src="images/black_rhino.jpg" height="200px" width="250px">
+    <img class="image" src="images/cape_buffalo.jpg" height="200px" width="250px">
+  </div>
+</body>
+</html>
